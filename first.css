@@ -1,0 +1,209 @@
+.headertop{
+    padding: 1px 0;
+    line-height: 38px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 2px solid brown;
+    margin-bottom: 2px;
+}
+.row{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.left-header-top {
+    padding-top: 10px;
+}
+.right-header-top {
+    text-align: center;
+    float: right;
+}
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+    list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+}
+.links {
+    padding-right: 5px;
+    text-transform: uppercase;
+}
+body{
+    background-color: rgb(248, 225, 196)
+}
+li{
+    float: left;
+    padding: 10px 10px 10px 10px;
+}
+.headertop2{
+    padding: 2px 0;
+    line-height: 78px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 2px solid brown;
+    margin-bottom: 2px;
+}
+.headertop3{
+    padding: 2px 0;
+    border: 2px solid rgb(207, 122, 122);
+    margin: 5px;
+    background-color: antiquewhite
+}
+.row3{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.scake{
+    border: 5px solid white;
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.scake-align{
+   float: left;
+}
+.mydiv {
+    margin-left: 17%;
+    margin-right: 17%;
+    
+   
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+   
+    perspective: 1000px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    color: black;
+  }
+  
+  .flip-box-back {
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .scakepara{
+      text-align: center;
+      margin-bottom: 20px;
+      color: brown;
+      text-decoration-color: beige;
+      text-decoration-style: wavy;
+      font-size: 35px;
+      font-style: italic;
+  }
+  .headingdiv{
+     
+      margin-left: 30%;
+      margin-right: 30%;
+      
+      border-radius: 10%;
+      margin-top: 20px;
+      margin-bottom: 10px;
+  }
+  .reviewdiv{
+    margin-left: 30%;
+    margin-right: 30%;
+
+    
+   
+  }
+  .imgreview{
+      width: 50px;
+      height: 50px;
+      margin-left: 45%;
+      margin-right: 40%;
+      margin-top: 20px;
+  }
+  .aboutsec{
+     border: 2px solid white;
+      background-color: rgb(240, 177, 100);
+  }
+
+  .aboutpara{
+      font-style: italic;
+      font-size: 17px;
+      color: black;
+      text-align: center;
+      margin: 15px 30px 20px 30px;
+  }
+  .deliveryimg{
+     width:100px;
+     height: 100px;
+     
+  }
+  .deliverysec{
+      margin: 30px;
+      border : 3px solid brown;
+      padding: 20px;
+      width: 1300px;
+      height:130px;
+      display: flex;
+      vertical-align: center;
+    
+  }
+  .abtlogo{
+width: 60px;
+height: 60px;
+margin-left: 48%;
+margin-right: 48%;
+  }
+  .abticon{
+      width: 20px;
+      height: 20px;
+      margin: 20px;
+  }
+  .abtsec{
+      display: flex;
+      margin-left: 42%;
+      margin-right: 40%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+  a.hv:hover {
+      background-color: burlywood;
+      border: 1px solid brown;
+      border-radius: 20%;
+  }
+  a.hv:active{
+      background-color: burlywood;
+      border: 1px solid brown;
+      border-radius: 20%;
+  }
+  .dp{
+      font-style: italic;
+      font-size: 20px;
+      color: brown;
+      background-color: bisque;
+      border-radius: 10%;
+  }
