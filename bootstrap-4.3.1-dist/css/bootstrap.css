@@ -6368,7 +6368,7 @@ a.close.disabled {
   bottom: 0;
   left: 0;
   z-index: 15;
-  display:-ms-grid;
+  display:-ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;

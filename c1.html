@@ -128,7 +128,21 @@
     margin-bottom:30px; 
     
 }
+.inputdes{
+  width: 700px;
+  margin : -10px 35px 25px 35px;
+  border: 2px solid grey;
+}
 
+.chb{
+  margin:20px 0px 10px 35px;
+}
+.chb1{
+  margin:20px 0px 10px 35px;
+}
+.chb2{
+  margin:20px 0px 10px 35px;
+}
 </style>
        </head>
 
@@ -194,7 +208,7 @@
                   <a class="nav-link inline-navlink hv" href="homepage.html" style="color: brown">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link inline-navlink hv" href="#" style="color: brown">About Us</a>
+                  <a class="nav-link inline-navlink hv" href="aboutUs.html" style="color: brown">About Us</a>
                 </li>
                 
                 <li class="nav-item dropdown">
@@ -219,10 +233,10 @@
                         <a class="nav-link inline-navlink hv" href="LuxaryChoclate.html" style="color: brown">Luxuary Chochlate</a>
                       </li>
                 <li class="nav-item">
-                    <a class="nav-link inline-navlink hv" href="#" style="color: brown">Contact Us</a>
+                    <a class="nav-link inline-navlink hv" href="contactus.html" style="color: brown">Contact Us</a>
                   </li>
                 <li class="nav-item">
-                    <a class="nav-link inline-navlink hv" href="#" style="color: brown">Our Stories</a>
+                    <a class="nav-link inline-navlink hv" href="ourStories.html" style="color: brown">Our Stores</a>
                   </li>
 
               </ul>
@@ -250,8 +264,40 @@
   For all the pineapple lovers!! Fresh Pineapple chunks with a sophisticated design.</p>
   </div>
   <div>
-     <p style="color: brown; font-style: italic; margin: 40px font- size 20px; display: inline; ">Price: Rs 945.00</p>
-     <p style="text-align: right; display:inline-block;">Availability:</p><p style="color: green; text-align: right ;display:inline">In stock</p>
+     <p style="color: brown; font-style: italic; margin-top: 40px; margin-left: 20px;margin-right: 20px;margin-bottom:40px;font-size: 20px; text-align: left;">Price: Rs 945.00
+     <span style="float: right;" >Availability:<span id ="stock" style="color: green ;"> In stock</span></span></p>
+  </div>
+  <div>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:grey">Message on cake</p>
+    <input type="text" name="msg" id="msg" class="inputdes">
+  </div>
+  <div>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown ; font-size: 20px ; font-style: italic"><strong>Weight</strong></p>
+    <label><input type="checkbox" name="w1" class="chb" checked/> 0.5Kg</label>
+    <label><input type="checkbox" name="w1" class="chb" style="margin-left: 230px"/> 1kg</label><br>
+    <label><input type="checkbox" name="w1" class="chb" /> 1.5Kg</label>
+    <label><input type="checkbox" name="w1" class="chb" style="margin-left: 230px"/> 2Kg</label><br>
+    <label><input type="checkbox" name="w1" class="chb" /> 2.5Kg</label>
+    <label><input type="checkbox" name="w1" class="chb" style="margin-left: 230px"/> 3Kg</label><br><br><br>
+
+  </div>
+  <div>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-style: italic;font-size: 20px;"><strong>Flavour</strong></p>
+    <label><input type="checkbox" name="f1" class="chb1" id="f"checked/> ButterScoch</label>
+    <label><input type="checkbox" name="f1" class="chb1" id="f" style="margin-left: 180px"/>Pineapple </label><br>
+    <label><input type="checkbox" name="f1" class="chb1" id="f"/> Strawberry&nbsp;&nbsp;</label>
+    <label><input type="checkbox" name="f1" class="chb1" id="f" style="margin-left: 180px"/> Chochlate</label><br>
+    <label><input type="checkbox" name="f1" class="chb1" id="f"/> Black Forest</label>
+    <label><input type="checkbox" name="f1" class="chb1" id="f" style="margin-left: 180px"/>Mix Fruit</label><br>
+    <label><input type="checkbox" name="f1" class="chb1" id="f"/>RabriAlmond</label>
+    <label><input type="checkbox" name="f1" class="chb1" id="f" style="margin-left: 180px"/>Dark Chochlate</label><br><br><br>
+
+  </div>
+  <div>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-size: 20px; font-style: italic"><strong>Cke Type</strong></p>
+    <label><input type="checkbox" name="ct1" class="chb2" id="ct" checked />Eggless</label>
+    <label><input type="checkbox" name="ct1" class="chb2" id="ct" style="margin-left: 220px"/>With Egg</label><br>
+
   </div>
 </div>
 
@@ -335,11 +381,29 @@
       $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();   
       });
+
+
+      $(".chb").change(function() {
+      $(".chb").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      $(".chb1").change(function() {
+      $(".chb1").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      $(".chb2").change(function() {
+      $(".chb2").prop('checked', false);
+      $(this).prop('checked', true);
+      });
       </script>
+
+
       <script>
         // Initiate zoom effect:
         imageZoom("myimage", "myresult");
         </script>
+
+
   
          </body>
   </html>
