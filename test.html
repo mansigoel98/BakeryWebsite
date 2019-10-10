@@ -1,0 +1,45 @@
+<style>
+.btdes{
+    background-color: rgb(231, 55, 55);
+    color: white;
+    margin-left: 30%;
+    width: 200px;
+    margin-top: 20px;
+}
+.cartdiv{
+    margin:100px;
+    color:rgb(194, 73, 73);
+    width:100%;
+    border: 5px solid brown;
+}
+</style>
+
+<body>
+    
+<div>
+<form action="addAdd.php" method="POST">
+<h3>Contact Information</h3>
+<p style="margin-left: 35px ; margin-bottom: 4px; color:rgb(115, 204, 115)">Name*</p>
+    <input type="text" name="name" id="msg" class="inputdes" required>
+ <p style="margin-left: 35px ; margin-bottom: 4px; color:grey">Phone Number*</p>
+    <input type="text" name="mobile" id="msg" class="inputdes" required>
+ <br>
+ <hr>
+ <h3>Address Information</h3>   
+ <p style="margin-left: 35px ; margin-bottom: 4px; color:grey">Street*</p>
+    <input type="text" name="street" id="msg" class="inputdes" required>
+<p style="margin-left: 35px ; margin-bottom: 4px; color:grey">City/Town*</p>
+    <input type="text" name="city" id="msg" class="inputdes" required>
+ <p style="margin-left: 35px ; margin-bottom: 4px; color:grey">State*</p>
+ <input type="text" name="state" id="msg" class="inputdes" required> 
+ <p style="margin-left: 35px ; margin-bottom: 4px; color:grey">Country*</p>
+    <input type="text" name="country" id="msg" class="inputdes" required>
+<p style="margin-left: 35px ; margin-bottom: 4px; color:grey">Pincode*</p>
+    <input type="text" name="pin" id="msg" class="inputdes"required>  
+    <button type="submit" class="btdes" style="margin-left:40%"> Add Address</button>
+
+</form>
+
+</div>
+
+</body>
