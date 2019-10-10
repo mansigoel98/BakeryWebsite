@@ -14,6 +14,7 @@ session_start();
         <link rel ="stylesheet" href ="bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
         <link rel ="stylesheet" href ="bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
         <link rel ="stylesheet" href ="bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="first.css">
         <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
         <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
@@ -27,73 +28,69 @@ session_start();
 <link rel="shortcut icon" href="images.jpg" type="image/x-icon" />
 
 
+
+
+
+
+<script>
+
+  function validate(){
+    if(document.entry.msg.value==""){
+      alert("Msessage field is empty");
+      return false;
+    }
+    return true;
+  }
+  
+  </script>
+
+
+
+
+
+
+
+<style>
+  * {box-sizing: border-box;}
+  
+  .img-zoom-container {
+    position: relative;
+    float: left;
+    margin: 30px;
+    
+  }
+  
+  .img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 40px;
+    height: 40px;
+  }
+  
+  .img-zoom-result {
+    border: 3px solid white;
+    /*set the size of the result div:*/
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+  }
+  </style>
+  
 <style>
 .inline-navlink{
   font-style:italic;
   font-size: 25px;
   text-decoration-color: brown;
 }
-* {
-  box-sizing: border-box;
-}
-
-body {
-
-  padding: 20px;
-  font-family: Arial;
-}
-
-/* Center website */
-.main {
-  max-width: 800px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-.row1 {
-  margin-left: 14%;
-}
-
-/* Add padding BETWEEN each column */
-.row1,
-.row1 > .column {
-  padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 29.33%;
-  display: none; /* Hide all elements by default */
-}
-
-/* Clear floats after rows */ 
-.row1:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
+.desc{
+  width: 65%;
+  height:1200px;
   background-color: white;
-  padding: 10px;
+  margin: 30px;
+  float: left;
+  padding: 20px;
 }
-
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
-}
-
-.imgann{
-width: 288px;
-height: 250px;
-}
-.imgann:hover {opacity: 0.7;}
 .annh{
     text-align: center;
     font-size: 50px;
@@ -101,10 +98,37 @@ height: 250px;
     color: brown;
     font-family: cursive;
     margin-top: 20px;
-    margin-bottom:20px; 
+    margin-bottom:30px; 
     
 }
+.inputdes{
+  width: 700px;
+  margin : -10px 35px 25px 35px;
+  border: 2px solid grey;
+}
 
+.chb{
+  margin:20px 0px 10px 35px;
+}
+.chb1{
+  margin:20px 0px 10px 35px;
+}
+.chb2{
+  margin:20px 0px 10px 35px;
+}
+.btdes{
+    background-color: brown;
+    color: white;
+    margin-left: 39%;
+    width: 200px;
+    margin-top: 20px;
+    padding: 12px 16px; 
+  font-size: 16px; 
+  cursor: pointer;
+}
+.btdes:hover {
+  background-color: rgb(231, 55, 55);
+}
 </style>
        </head>
 
@@ -125,7 +149,7 @@ height: 250px;
                    </ul>
                </div>
              <div class="right-header-top">
-                 <ul class="links list-inline" style="margin-left:303px;">    
+                 <ul class="links list-inline" style="margin-left:403px;">    
                  <li class="liLinks">
                          <?php
                          if(isset($_SESSION['username'])){
@@ -170,7 +194,7 @@ height: 250px;
                          }
 
                         ?>
-                         </li>  
+                         </li>            
                  </ul>     
 
                 </div> 
@@ -217,7 +241,6 @@ height: 250px;
 
 
 
-         
          <nav class="navbar navbar-expand-lg navbar-light headertop3 sticky-top">
            
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -262,204 +285,172 @@ height: 250px;
         </nav>
 
 
-<!------next section---------------------------------------------------------->
 
 
 
 
 
 
-<div id="myBtnContainer">
-    <h1 class="annh"> BirthDay Cakes</h1>
-    
+
+<!-----------------------------next section------------------------------------------------------------------>
+
+<div class="img-zoom-container">
+  <img id="myimage" src="bdcake6.jpg" width="300px" height="300px" style="border: 5px solid white">
+</div>
+<div class="desc">
+  <div style="border-bottom: 2px dotted green">
+<h1 class="annh">Choclate Cake</h1>
+<p style="text-align: center; font-size:15px; margin:15px">
+  For all the cake lovers!! chocho chunks with a sophisticated design.</p>
   </div>
-  
-  <!-- Portfolio Gallery Grid -->
-  <div class="row1">
-    <div class="column nature">
-      <div class="content">
-        <a href="bd1.php"><img src="bdcake1.jpg" alt="bdcake" class="imgann" data-toggle="tooltip" title= "Click - Add to cart"></a>
-        <h4>Chochlate Cake</h4>
-        <p>Happy Birthday</p>
-      </div>
-    </div>
-    <div class="column nature">
-      <div class="content">
-        <a href="bd2.php"><img src="bdcake2.jpg" alt="bdcake" class="imgann" data-toggle="tooltip" title= "Click - Add to cart"></a>
-        <h4>Dark Chochlate Cake</h4>
-        <p>Happy Birthday</p>
-      </div>
-    </div>
-    <div class="column nature">
-      <div class="content">
-        <a href="bd3.php"><img src="bdcake3.jpg" alt="bdcake" class="imgann" data-toggle="tooltip" title= "Click - Add to cart"></a>
-        <h4>Black Forest Cake</h4>
-        <p>Happy Birthday</p>
-      </div>
-    </div>
-    
-    <div class="column cars">
-      <div class="content">
-        <a href="bd4.php"><img src="bdcake4.jpg" alt="bdcake" class="imgann" data-toggle="tooltip" title= "Click - Add to cart"></a>
-        <h4>Red Heart Cake</h4>
-        <p>Happy Birthday</p>
-      </div>
-    </div>
-    <div class="column cars">
-      <div class="content">
-        <a href="bd5.php"><img src="bdcake5.jpg" alt="bdcake" class="imgann" data-toggle="tooltip" title= "Click - Add to cart"></a>
-        <h4>Flower Cake</h4>
-        <p>Happy Birthday</p>
-      </div>
-    </div>
-    <div class="column cars">
-      <div class="content">
-        <a href="bd6.php"><img src="bdcake6.jpg" alt="bdcake" class="imgann" data-toggle="tooltip" title= "Click - Add to cart"></a>
-        <h4>Balloon Cake</h4>
-        <p>Happy Birthday.</p>
-      </div>
-    </div>
-  
-    <div class="column people">
-      <div class="content">
-        <a href="bd7.php"><img src="bdcake7.jpg" alt="bdcake" class="imgann" data-toggle="tooltip" title= "Click - Add to cart"></a>
-        <h4>Chochopie Cake</h4>
-        <p>Happy Birthday</p>
-      </div>
-    </div>
-    <div class="column people">
-      <div class="content">
-        <a href="bd8.php"><img src="bdcake8.jpg" alt="bdcake" class="imgann" data-toggle="tooltip" title= "Click - Add to cart"></a>
-        <h4>ColorFul Cake</h4>
-        <p>Happy Birthday</p>
-      </div>
-    </div>
-    <div class="column people">
-      <div class="content">
-        <a href="bd9.php"><img src="bdcake9.jpg" alt="bdcake" class="imgann" data-toggle="tooltip" title= "Click - Add to cart"></a>
-        <h4>Vanilla Cake</h4>
-        <p>Happy Birthday</p>
-      </div>
-    </div>
-  <!-- END GRID -->
+  <div>
+     <p style="color: brown; font-style: italic; margin-top: 40px; margin-left: 20px;margin-right: 20px;margin-bottom:40px;font-size: 20px; text-align: left;">Price: Rs 945.00
+     <span style="float: right;" >Availability:<span id ="stock" style="color: green ;"> In stock</span></span></p>
   </div>
-  
-  <!-- END MAIN -->
-  </div>
-  
 
+
+
+
+  <form name="entry" onsubmit="return validate()" action="cart.php" method="POST">
+  <div>
+    <?php
+    $_SESSION['cakeName']="Chochlate Cake";
+    $_SESSION['price']="675.00";
+    $_SESSION['imgcake']="bdcake6.jpg";
+    $_SESSION['type']="cake";
+
+    ?>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:grey">Message on cake</p>
+    <input type="text" name="msg" id="msg" class="inputdes">
+  </div>
+  <div>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown ; font-size: 20px ; font-style: italic"><strong>Weight</strong></p>
+    <label><input type="checkbox" name="w1" class="chb" checked/> 0.5Kg</label>
+    <label><input type="checkbox" name="w2" class="chb" style="margin-left: 230px"/> 1kg</label><br>
+    <label><input type="checkbox" name="w3" class="chb" /> 1.5Kg</label>
+    <label><input type="checkbox" name="w4" class="chb" style="margin-left: 230px"/> 2Kg</label><br>
+    <label><input type="checkbox" name="w5" class="chb" /> 2.5Kg</label>
+    <label><input type="checkbox" name="w6" class="chb" style="margin-left: 230px"/> 3Kg</label><br><br><br>
+
+  </div>
+  <div>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-style: italic;font-size: 20px;"><strong>Flavour</strong></p>
+    <label><input type="checkbox" name="f1" class="chb1" id="f"checked/> ButterScoch</label>
+    <label><input type="checkbox" name="f2" class="chb1" id="f" style="margin-left: 180px"/>Pineapple </label><br>
+    <label><input type="checkbox" name="f3" class="chb1" id="f"/> Strawberry&nbsp;&nbsp;</label>
+    <label><input type="checkbox" name="f4" class="chb1" id="f" style="margin-left: 180px"/> Chochlate</label><br>
+    <label><input type="checkbox" name="f5" class="chb1" id="f"/> Black Forest</label>
+    <label><input type="checkbox" name="f6" class="chb1" id="f" style="margin-left: 180px"/>Mix Fruit</label><br>
+    <label><input type="checkbox" name="f7" class="chb1" id="f"/>RabriAlmond</label>
+    <label><input type="checkbox" name="f8" class="chb1" id="f" style="margin-left: 180px"/>Dark Chochlate</label><br><br><br>
+
+  </div>
+  <div>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-size: 20px; font-style: italic"><strong>Cake Type</strong></p>
+    <label><input type="checkbox" name="ct1" class="chb2" id="ct" checked />Eggless</label>
+    <label><input type="checkbox" name="ct2" class="chb2" id="ct" style="margin-left: 220px"/>With Egg</label><br>
+
+  </div>
+
+   <button type="submit" name="onsubmit" class="btdes"><i class="fa fa-shopping-cart">&nbsp;&nbsp;Add to Cart</i></button>
+   <hr>
+   <button type="submit" class="btdes" formAction="addWishlist.php"><i class="fa fa-heart">&nbsp;&nbsp;Add to Wishlist</i> </button>
+
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+<!----------------------------------next section---------------------------------------------------------------->
           
-<!----next Section--------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+<!----next Section--->
 
 
 <section class="deliverysec">
-    <img src="Delivery.png" alt="delivery" class="deliveryimg">
-    <section style="margin-left: 600px">
-    <h1 style="text-align:right">Free Delivery</h1>
-    <p style="text-align: right">Be it midnight , early morning . We deliver according to time of your choice.</p>
-    </section>
-    </section>
-    
-    
-    <!--- next Section --->
-    
-    <section style="border-bottom:3px solid brown">
-        <div class="reviewdiv">
-            <img src="heart.png" alt ="like us" class="imgreview" >
-            <h2 style="text-align: center; color: brown;font-style: italic"> Customer Love Us</h2>
-            <p style="text-align: center ; font-size: 15px">
-                We love to see our customers leave with their taste buds delighted and they say
-                amazing things.
-              </p>
-                </div>
-    </section >
-    
-    <!----next Section  ---->
-    
-    
-    <section class="aboutsec">
-    <h1 style="text-align: center ; margin-top: 10px;color: brown">About Us</h1>
-    <p class="aboutpara"> THIS WEBSITE HAS BEEN SHAPED SO THAT WE PEOPLE CAN ORDER CAKES FOR THEIR LOVED ONES.
-       YOU CAN SHARE YOUR INCREDIBLY VALUABLE VIEWS ON OUR BAKERY, ANY SUGGESTIONS ARE WELCOME.
-       We love to see our customers leave with their taste buds delighted and they say
-       amazing things.THIS WEBSITE HAS BEEN SHAPED SO THAT WE PEOPLE CAN ORDER CAKES FOR THEIR LOVED ONES.
-       YOU CAN SHARE YOUR INCREDIBLY VALUABLE VIEWS ON OUR BAKERY, ANY SUGGESTIONS ARE WELCOME.
-       We love to see our customers leave with their taste buds delighted and they say
-       amazing things.</p>
-       <img src="images.jpg" alt="logo" class="abtlogo">
-       <p style="text-align: center">We aim to add flavour to your occassions by baking a beautiful and 
-         attractive cake that's fresh and delicious to taste!</p>
-       <section class="abtsec">
-         <img src="call.png" alt="call" class="abticon" data-toggle="tooltip" title="Call us at -8978867856">
-         <a href="https://www.facebook.com/"><img src="facebook.png" alt="facebook" class="abticon" data-toggle="tooltip" title="Like our Facebook Page"></a>
-         <a href="https://www.instagram.com/"><img src="instagram.png" alt="instagram" class="abticon" data-toggle="tooltip" title="Follow us on Instagram"></a>
-         <img src="gmail.png" alt="gmail" class="abticon" data-toggle="tooltip" title="Mail Us">
-       </section>
-    <p style="text-align: center">© 2019 Baking Girl. All Rights Reserved.</p>
-    
-    </section>
-    
-    
-    
-    
-    
-    <script>
-        $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip();   
-        });
-        </script>
-
-
-
-
-<script>
-    filterSelection("all")
-    function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("column");
-      if (c == "all") c = "";
-      for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-      }
-    }
-    
-    function w3AddClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-      }
-    }
-    
-    function w3RemoveClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);     
-        }
-      }
-      element.className = arr1.join(" ");
-    }
-    
-    
-    // Add active class to the current button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
+  <img src="Delivery.png" alt="delivery" class="deliveryimg">
+  <section style="margin-left: 600px">
+  <h1 style="text-align:right">Free Delivery</h1>
+  <p style="text-align: right">Be it midnight , early morning . We deliver according to time of your choice.</p>
+  </section>
+  </section>
+  
+  
+  <!--- next Section --->
+  
+  <section style="border-bottom:3px solid brown">
+      <div class="reviewdiv">
+          <img src="heart.png" alt ="like us" class="imgreview" >
+          <h2 style="text-align: center; color: brown;font-style: italic"> Customer Love Us</h2>
+          <p style="text-align: center ; font-size: 15px">
+              We love to see our customers leave with their taste buds delighted and they say
+              amazing things.
+            </p>
+        </div>
+  </section >
+  
+  <!----next Section  ---->
+  
+  
+  <section class="aboutsec">
+  <h1 style="text-align: center ; margin-top: 10px;color: brown">About Us</h1>
+  <p class="aboutpara"> THIS WEBSITE HAS BEEN SHAPED SO THAT WE PEOPLE CAN ORDER CAKES FOR THEIR LOVED ONES.
+     YOU CAN SHARE YOUR INCREDIBLY VALUABLE VIEWS ON OUR BAKERY, ANY SUGGESTIONS ARE WELCOME.
+     We love to see our customers leave with their taste buds delighted and they say
+     amazing things.THIS WEBSITE HAS BEEN SHAPED SO THAT WE PEOPLE CAN ORDER CAKES FOR THEIR LOVED ONES.
+     YOU CAN SHARE YOUR INCREDIBLY VALUABLE VIEWS ON OUR BAKERY, ANY SUGGESTIONS ARE WELCOME.
+     We love to see our customers leave with their taste buds delighted and they say
+     amazing things.</p>
+     <img src="images.jpg" alt="logo" class="abtlogo">
+     <p style="text-align: center">We aim to add flavour to your occassions by baking a beautiful and 
+       attractive cake that's fresh and delicious to taste!</p>
+     <section class="abtsec">
+       <img src="call.png" alt="call" class="abticon" data-toggle="tooltip" title="Call us at -8978867856">
+       <a href="https://www.facebook.com/"><img src="facebook.png" alt="facebook" class="abticon" data-toggle="tooltip" title="Like our Facebook Page"></a>
+       <a href="https://www.instagram.com/"><img src="instagram.png" alt="instagram" class="abticon" data-toggle="tooltip" title="Follow us on Instagram"></a>
+       <img src="gmail.png" alt="gmail" class="abticon" data-toggle="tooltip" title="Mail Us">
+     </section>
+  <p style="text-align: center">© 2019 Baking Girl. All Rights Reserved.</p>
+  
+  </section>
+  
+  
+  
+  
+  
+  <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
       });
-    }
-    </script>
-    
-    
-    
-           </body>
-    </html>
-
+      $(".chb").change(function() {
+      $(".chb").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      $(".chb1").change(function() {
+      $(".chb1").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      $(".chb2").change(function() {
+      $(".chb2").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      </script>  
+         </body>
+  </html>

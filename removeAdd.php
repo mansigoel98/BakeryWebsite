@@ -288,6 +288,8 @@ if(!isset($_SESSION['username'])){
                  mysqli_query($con,$q);
                  $q = "delete from defadd where addid = $addid";
                  mysqli_query($con,$q);
+                 $q = "delete from secadd where addid = $addid";
+                 mysqli_query($con,$q);
             mysqli_close($con);
             header('Location:myaddress.php');
          }

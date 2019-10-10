@@ -218,6 +218,10 @@ session_start();
             }
 
             mysqli_close($con);
+            $_SESSION['username']=$cusername;
+            $_SESSION['email']=$cemail;
+            $_SESSION['phone']=$cphone;
+            $_SESSION['password']=$cpassword;
             ?>
 
 
