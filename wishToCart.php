@@ -301,12 +301,13 @@ if(!isset($_SESSION['username'])){
                  $weight=$row['weight'];
                  $flavour=$row['flavour'];
                  $caketype=$row['caketype'];
+                 $type=$row['type'];
               }
               $q = "delete  from wishlist where cakeid = $cakeid";
               mysqli_query($con,$q);
 
 
-              $q = "insert into cart (cakeName,cakeid,price,imgcake,msg,weight,flavour,caketype,username) values ('$cakeName',NULL,'$price','$imgcake','$msg','$weight','$flavour','$caketype','$username')";
+              $q = "insert into cart (cakeName,cakeid,price,imgcake,msg,weight,flavour,caketype,username,type) values ('$cakeName',NULL,'$price','$imgcake','$msg','$weight','$flavour','$caketype','$username','$type')";
               mysqli_query($con,$q);
 
               mysqli_close($con);

@@ -269,6 +269,12 @@ if(!isset($_SESSION['username'])){
        
         <?php 
         $msg="";
+        $cakeName=$_SESSION['cakeName'];
+        $price=$_SESSION['price'];
+        $imgcake=$_SESSION['imgcake'];
+        $username=$_SESSION['username'];
+        $type=$_SESSION['type'];
+        
         if(isset($_POST['msg'])); 
         $msg = $_POST['msg'];
         $weight="0.5Kg";
@@ -282,18 +288,23 @@ if(!isset($_SESSION['username'])){
         }
         else if(isset($_POST['w2'])){
             $weight="1.0Kg";
+            $price=$price*2;
         }
         else if(isset($_POST['w3'])){
             $weight="1.5Kg";
+            $price=$price*3;
         }
         else if(isset($_POST['w4'])){
             $weight="2.0Kg";
+            $price=$price*4;
         }
         else if(isset($_POST['w5'])){
             $weight="2.5Kg";
+            $price=$price*5;
         }
         else if(isset($_POST['w6'])){
             $weight="3.0Kg";
+            $price=$price*6;
         }
 
 
@@ -334,16 +345,13 @@ if(!isset($_SESSION['username'])){
        
        $cakeid=0;
 
-        $cakeName=$_SESSION['cakeName'];
-        $price=$_SESSION['price'];
-        $imgcake=$_SESSION['imgcake'];
-        $username=$_SESSION['username'];
+       
 
         $con =mysqli_connect('localhost','mansi','mansi');
         if($con)
          {
           mysqli_select_db($con,'bakery');
-           $q = "insert into wishlist (cakeName,cakeid,price,imgcake,msg,weight,flavour,caketype,username) values ('$cakeName',NULL,'$price','$imgcake','$msg','$weight','$flavour','$caketype','$username')";
+           $q = "insert into wishlist (cakeName,cakeid,price,imgcake,msg,weight,flavour,caketype,username,type) values ('$cakeName',NULL,'$price','$imgcake','$msg','$weight','$flavour','$caketype','$username','$type')";
            mysqli_query($con,$q);
         }
         mysqli_close($con);

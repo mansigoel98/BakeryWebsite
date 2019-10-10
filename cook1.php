@@ -295,16 +295,16 @@ session_start();
 <!-----------------------------next section------------------------------------------------------------------>
 
 <div class="img-zoom-container">
-  <img id="myimage" src="scake12.jpg" width="300" height="300" style="border: 5px solid white">
+  <img id="myimage" src="cook1.jpg" width="300" height="300" style="border: 5px solid white">
 </div>
 <div class="desc">
   <div style="border-bottom: 2px dotted green">
-<h1 class="annh">Butterscoch Cake</h1>
-<p style="text-align: center; font-size:15px; margin:15px">Butterscoch Cake
-  For all the Butterscoch lovers!! Dark Chochlate chunks with a sophisticated design.</p>
+<h1 class="annh">Silky kisses</h1>
+<p style="text-align: center; font-size:15px; margin:15px">
+Fortune cookies are a good idea. If the message is positive, it can make your day a little better.</p>
   </div>
   <div>
-     <p style="color: brown; font-style: italic; margin-top: 40px; margin-left: 20px;margin-right: 20px;margin-bottom:40px;font-size: 20px; text-align: left;">Price: Rs 779.00
+     <p style="color: brown; font-style: italic; margin-top: 40px; margin-left: 20px;margin-right: 20px;margin-bottom:40px;font-size: 20px; text-align: left;">Price: Rs 945.00/half kg
      <span style="float: right;" >Availability:<span id ="stock" style="color: green ;"> In stock</span></span></p>
   </div>
 
@@ -312,16 +312,14 @@ session_start();
 
 
   <form name="entry" onsubmit="return validate()" action="cart.php" method="POST">
-  <div>
     <?php
-    $_SESSION['cakeName']="Butterscoch Cake";
-    $_SESSION['price']="779.00";
-    $_SESSION['imgcake']="scake12.jpg";
+    $_SESSION['cakeName']="Silky Kissses";
+    $_SESSION['price']="945.00";
+    $_SESSION['imgcake']="cook1.jpg";
+    $_SESSION['type']="cookies";
 
     ?>
-    <p style="margin-left: 35px ; margin-bottom: 4px; color:grey">Message on cake</p>
-    <input type="text" name="msg" id="msg" class="inputdes">
-  </div>
+  
   <div>
     <p style="margin-left: 35px ; margin-bottom: 4px; color:brown ; font-size: 20px ; font-style: italic"><strong>Weight</strong></p>
     <label><input type="checkbox" name="w1" class="chb" checked/> 0.5Kg</label>
@@ -332,18 +330,7 @@ session_start();
     <label><input type="checkbox" name="w6" class="chb" style="margin-left: 230px"/> 3Kg</label><br><br><br>
 
   </div>
-  <div>
-    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-style: italic;font-size: 20px;"><strong>Flavour</strong></p>
-    <label><input type="checkbox" name="f1" class="chb1" id="f"checked/> ButterScoch</label>
-    <label><input type="checkbox" name="f2" class="chb1" id="f" style="margin-left: 180px"/>Pineapple </label><br>
-    <label><input type="checkbox" name="f3" class="chb1" id="f"/> Strawberry&nbsp;&nbsp;</label>
-    <label><input type="checkbox" name="f4" class="chb1" id="f" style="margin-left: 180px"/> Chochlate</label><br>
-    <label><input type="checkbox" name="f5" class="chb1" id="f"/> Black Forest</label>
-    <label><input type="checkbox" name="f6" class="chb1" id="f" style="margin-left: 180px"/>Mix Fruit</label><br>
-    <label><input type="checkbox" name="f7" class="chb1" id="f"/>RabriAlmond</label>
-    <label><input type="checkbox" name="f8" class="chb1" id="f" style="margin-left: 180px"/>Dark Chochlate</label><br><br><br>
-
-  </div>
+  
   <div>
     <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-size: 20px; font-style: italic"><strong>Cke Type</strong></p>
     <label><input type="checkbox" name="ct1" class="chb2" id="ct" checked />Eggless</label>
@@ -437,6 +424,18 @@ session_start();
   <script>
       $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();   
+      });
+      $(".chb").change(function() {
+      $(".chb").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      $(".chb1").change(function() {
+      $(".chb1").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      $(".chb2").change(function() {
+      $(".chb2").prop('checked', false);
+      $(this).prop('checked', true);
       });
       </script>  
          </body>

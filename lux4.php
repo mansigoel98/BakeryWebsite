@@ -1,9 +1,6 @@
 <?php
 @ob_start();
 session_start();
-if(!isset($_SESSION['username'])){
-    header('Location:login.php');
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +14,7 @@ if(!isset($_SESSION['username'])){
         <link rel ="stylesheet" href ="bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
         <link rel ="stylesheet" href ="bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
         <link rel ="stylesheet" href ="bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="first.css">
         <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
         <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
@@ -28,11 +26,70 @@ if(!isset($_SESSION['username'])){
         
 <link rel="icon" href="images.jpg" type="image/x-icon" />
 <link rel="shortcut icon" href="images.jpg" type="image/x-icon" />
+
+
+
+
+
+
+<script>
+
+  function validate(){
+    if(document.entry.msg.value==""){
+      alert("Msessage field is empty");
+      return false;
+    }
+    return true;
+  }
+  
+  </script>
+
+
+
+
+
+
+
+<style>
+  * {box-sizing: border-box;}
+  
+  .img-zoom-container {
+    position: relative;
+    float: left;
+    margin: 30px;
+    
+  }
+  
+  .img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 40px;
+    height: 40px;
+  }
+  
+  .img-zoom-result {
+    border: 3px solid white;
+    /*set the size of the result div:*/
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+  }
+  </style>
+  
 <style>
 .inline-navlink{
   font-style:italic;
   font-size: 25px;
   text-decoration-color: brown;
+}
+.desc{
+  width: 65%;
+  height:900px;
+  background-color: white;
+  margin: 30px;
+  float: left;
+  padding: 20px;
 }
 .annh{
     text-align: center;
@@ -41,75 +98,36 @@ if(!isset($_SESSION['username'])){
     color: brown;
     font-family: cursive;
     margin-top: 20px;
-    margin-bottom:20px; 
+    margin-bottom:30px; 
     
 }
-.cartdiv{
-    margin:100px;
-    background-color:white;
-    width:1130px;
-    padding:40px;
-    border: 5px solid brown;
+.inputdes{
+  width: 700px;
+  margin : -10px 35px 25px 35px;
+  border: 2px solid grey;
 }
 
-.cartimg{
-    width:180px;
-    height:180px;
-    border:4px solid gray;
-    float:left;
-    margin-right:70px;
-    margin-bottom:20px;
+.chb{
+  margin:20px 0px 10px 35px;
 }
-.cartdetails{
-    
-    margin-left:40px;
+.chb1{
+  margin:20px 0px 10px 35px;
 }
-
+.chb2{
+  margin:20px 0px 10px 35px;
+}
 .btdes{
     background-color: brown;
     color: white;
-    margin-left: 79%;
+    margin-left: 39%;
     width: 200px;
     margin-top: 20px;
     padding: 12px 16px; 
-    text-decoration: none;
   font-size: 16px; 
   cursor: pointer;
 }
 .btdes:hover {
   background-color: rgb(231, 55, 55);
-  text-decoration:none;
-  color:white;
-}
-.btcart{
-    background-color:rgb(63, 173, 63);
-    color: white;
-    margin: 20px;
-    width: 200px;
-    padding: 12px 16px; 
-    text-decoration: none;
-  font-size: 16px; 
-  cursor: pointer;
-}
-.btremove{
-    background-color:red;
-    color: white;
-    margin: 20px;
-    width: 100px;
-    padding: 12px 16px; 
-    text-decoration: none;
-  font-size: 16px; 
-  cursor: pointer;
-}
-.btcart:hover {
-  background-color: rgb(231, 55, 55);
-  text-decoration:none;
-  color:white;
-}
-.btremove:hover {
-  background-color: rgb(231, 55, 55);
-  text-decoration:none;
-  color:white;
 }
 </style>
        </head>
@@ -131,9 +149,8 @@ if(!isset($_SESSION['username'])){
                    </ul>
                </div>
              <div class="right-header-top">
-                 <ul class="links list-inline" style="margin-left:403px;">  
-                       
-                       <li class="liLinks">
+                 <ul class="links list-inline" style="margin-left:403px;">    
+                 <li class="liLinks">
                          <?php
                          if(isset($_SESSION['username'])){
                           echo "<a href='myAccount.php' style='color: brown' class='hv'>My Account</a>";
@@ -184,7 +201,8 @@ if(!isset($_SESSION['username'])){
              </div>
          </div>
 
-   
+
+
          <!-----nect section  ----->
 
          <section class="headertop2">
@@ -210,7 +228,7 @@ if(!isset($_SESSION['username'])){
              }
 
              ?>
-             <?php  
+              <?php 
                          if(isset($_SESSION['username'])){
                            $username=$_SESSION['username'];
                            echo "<h5 align='center'>Hi $username!</h5>";
@@ -219,6 +237,7 @@ if(!isset($_SESSION['username'])){
                          ?> 
            </div>
           </section>
+
 
 
 
@@ -266,94 +285,65 @@ if(!isset($_SESSION['username'])){
         </nav>
 
 
-        <!------------------------------------next section------------------------------------------------------------>
-       <h1 class="annh">Shopping cart </h1>
-       <div class="cartdiv"> 
-        <?php
-        $username=$_SESSION['username'];
-        $total=0;
-        $con =mysqli_connect('localhost','mansi','mansi');
-       if($con)
-           {
-              mysqli_select_db($con,'bakery');
-              $q = "select * from cart where username='$username'";
-              $result = mysqli_query($con,$q);
-              $num=mysqli_num_rows($result);
-              if($num==0){
-                echo "<h1 class='annh'>Your Cart is empty</h1>";
-              }
-              else{
-
-               echo "<a href='checkout.php'  class='btdes'>Proceed to Checkout</a>";
-                
-                $num=mysqli_num_rows($result);
-               for($i=1 ;$i<=$num;$i++) {
-               $row=mysqli_fetch_array($result);
-               $username=$row['username'];
-               $cakeName=$row['cakeName'];
-               $cakeid=$row['cakeid'];
-               $price=$row['price'];
-                $imgcake=$row['imgcake'];
-                $msg=$row['msg'];
-                $weight=$row['weight'];
-                $flavour=$row['flavour'];
-                $caketype=$row['caketype'];
-                $type=$row['type'];
-                ?>
-                <div style="border-bottom : 2px solid grey">
-                <?php
-                if($type=="cake"){
-                echo "<h1 class='annh'>$cakeName</h1>";
-                echo "<img src='$imgcake' alt='cake' class='cartimg'>";
-                echo "<h5 class='cartdetails'>Price : $price </h5>";
-                echo "<h5 class='cartdetails'>Message On Cake : $msg</h5>";
-                echo "<h5 class='cartdetails'>Weight of Cake : $weight</h5>";
-                echo "<h5 class='cartdetails'>Flavour of Cake : $flavour</h5>";
-                echo "<h5 class='cartdetails'>Cake Type : $caketype</h5>";
-                }
-                else if($type=="cookies"){
-                  echo "<h1 class='annh'>$cakeName</h1>";
-                echo "<img src='$imgcake' alt='cake' class='cartimg'>";
-                echo "<h5 class='cartdetails'>Price : $price </h5>";
-                echo "<h5 class='cartdetails'>Weight of Cookies : $weight</h5>";
-                echo "<h5 class='cartdetails'>Cookie Type : $caketype</h5>";
-                }
-                else if($type=="chochlate"){
-                  echo "<h1 class='annh'>$cakeName</h1>";
-                echo "<img src='$imgcake' alt='cake' class='cartimg'>";
-                echo "<h5 class='cartdetails'>Price : $price </h5>";
-                echo "<h5 class='cartdetails'>Weight of Chochlate : $weight</h5>";
-                
-                }
-                ?>
-                <form action="removeCart.php"  method="POST">
-                <button type="submit" class="btremove"  name="removecart" value ="<?php echo "$cakeid"  ?>">Remove</button>
-                </form>
-                </div>
-               
-                <?php
-                $total =$total +$price;
-              }
-              echo "<br><br>";
-              echo "<h4>Total value of cart : $total</h4>";
-              ?>
-              <form action="clearCart.php" method="POST">
-              <a href="homepage.php"><button type="button" class="btcart">Continue Shopping</button></a>
-              
-              <button type="submit" class="btcart">Clear Shopping Cart</button>
-              </form>
 
 
-             <?php
-
-           }
-        } 
 
 
-        mysqli_close($con);
-           ?>
 
-      </div>
+
+
+<!-----------------------------next section------------------------------------------------------------------>
+
+<div class="img-zoom-container">
+  <img id="myimage" src="lc4.jpg" width="300" height="300" style="border: 5px solid white">
+</div>
+<div class="desc">
+  <div style="border-bottom: 2px dotted green">
+<h1 class="annh">Chochlate Chip Chochlate</h1>
+<p style="text-align: center; font-size:15px; margin:15px">
+Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.</p>
+  </div>
+  <div>
+     <p style="color: brown; font-style: italic; margin-top: 40px; margin-left: 20px;margin-right: 20px;margin-bottom:40px;font-size: 20px; text-align: left;">Price: Rs 675.00/half kg
+     <span style="float: right;" >Availability:<span id ="stock" style="color: green ;"> In stock</span></span></p>
+  </div>
+
+
+
+
+  <form name="entry" onsubmit="return validate()" action="cart.php" method="POST">
+    <?php
+    $_SESSION['cakeName']="Chochlate Chip chochlate";
+    $_SESSION['price']="675.00";
+    $_SESSION['imgcake']="lc4.jpg";
+    $_SESSION['type']="chochlate";
+
+    ?>
+  
+  <div>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown ; font-size: 20px ; font-style: italic"><strong>Weight</strong></p>
+    <label><input type="checkbox" name="w1" class="chb" checked/> 0.5Kg</label>
+    <label><input type="checkbox" name="w2" class="chb" style="margin-left: 230px"/> 1kg</label><br>
+    <label><input type="checkbox" name="w3" class="chb" /> 1.5Kg</label>
+    <label><input type="checkbox" name="w4" class="chb" style="margin-left: 230px"/> 2Kg</label><br>
+    <label><input type="checkbox" name="w5" class="chb" /> 2.5Kg</label>
+    <label><input type="checkbox" name="w6" class="chb" style="margin-left: 230px"/> 3Kg</label><br><br><br>
+
+  </div>
+  
+  <div>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-size: 20px; font-style: italic"><strong>Chochlate Type</strong></p>
+    <label><input type="checkbox" name="ct1" class="chb2" id="ct" checked />Eggless</label>
+    <label><input type="checkbox" name="ct2" class="chb2" id="ct" style="margin-left: 220px"/>With Egg</label><br>
+
+  </div>
+
+   <button type="submit" name="onsubmit" class="btdes"><i class="fa fa-shopping-cart">&nbsp;&nbsp;Add to Cart</i></button>
+   <hr>
+   <button type="submit" class="btdes" formAction="addWishlist.php"><i class="fa fa-heart">&nbsp;&nbsp;Add to Wishlist</i> </button>
+
+</form>
+</div>
 
 
 
@@ -363,6 +353,8 @@ if(!isset($_SESSION['username'])){
 
 
 
+<!----------------------------------next section---------------------------------------------------------------->
+          
 
 
 
@@ -370,19 +362,6 @@ if(!isset($_SESSION['username'])){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-        <!----------------------------------------------------next section------------------------------------------------->
 
 
 
@@ -392,61 +371,72 @@ if(!isset($_SESSION['username'])){
 
 
 <section class="deliverysec">
-<img src="Delivery.png" alt="delivery" class="deliveryimg">
-<section style="margin-left: 600px">
-<h1 style="text-align:right">Free Delivery</h1>
-<p style="text-align: right">Be it midnight , early morning . We deliver according to time of your choice.</p>
-</section>
-</section>
-
-
-<!--- next Section --->
-
-<section style="border-bottom:3px solid brown">
-    <div class="reviewdiv">
-        <img src="heart.png" alt ="like us" class="imgreview" >
-        <h2 style="text-align: center; color: brown;font-style: italic"> Customer Love Us</h2>
-        <p style="text-align: center ; font-size: 15px">
-            We love to see our customers leave with their taste buds delighted and they say
-            amazing things.
-          </p>
-			</div>
-</section >
-
-<!----next Section  ---->
-
-
-<section class="aboutsec">
-<h1 style="text-align: center ; margin-top: 10px;color: brown">About Us</h1>
-<p class="aboutpara"> THIS WEBSITE HAS BEEN SHAPED SO THAT WE PEOPLE CAN ORDER CAKES FOR THEIR LOVED ONES.
-   YOU CAN SHARE YOUR INCREDIBLY VALUABLE VIEWS ON OUR BAKERY, ANY SUGGESTIONS ARE WELCOME.
-   We love to see our customers leave with their taste buds delighted and they say
-   amazing things.THIS WEBSITE HAS BEEN SHAPED SO THAT WE PEOPLE CAN ORDER CAKES FOR THEIR LOVED ONES.
-   YOU CAN SHARE YOUR INCREDIBLY VALUABLE VIEWS ON OUR BAKERY, ANY SUGGESTIONS ARE WELCOME.
-   We love to see our customers leave with their taste buds delighted and they say
-   amazing things.</p>
-   <img src="images.jpg" alt="logo" class="abtlogo">
-   <p style="text-align: center">We aim to add flavour to your occassions by baking a beautiful and 
-     attractive cake that's fresh and delicious to taste!</p>
-   <section class="abtsec">
-     <img src="call.png" alt="call" class="abticon" data-toggle="tooltip" title="Call us at -8978867856">
-     <a href="https://www.facebook.com/"><img src="facebook.png" alt="facebook" class="abticon" data-toggle="tooltip" title="Like our Facebook Page"></a>
-     <a href="https://www.instagram.com/"><img src="instagram.png" alt="instagram" class="abticon" data-toggle="tooltip" title="Follow us on Instagram"></a>
-     <img src="gmail.png" alt="gmail" class="abticon" data-toggle="tooltip" title="Mail Us">
-   </section>
-<p style="text-align: center">© 2019 Baking Girl. All Rights Reserved.</p>
-
-</section>
-
-
-
-
-
-<script>
-    $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();   
-    });
-    </script>
-
-       </body>
-</html>
+  <img src="Delivery.png" alt="delivery" class="deliveryimg">
+  <section style="margin-left: 600px">
+  <h1 style="text-align:right">Free Delivery</h1>
+  <p style="text-align: right">Be it midnight , early morning . We deliver according to time of your choice.</p>
+  </section>
+  </section>
+  
+  
+  <!--- next Section --->
+  
+  <section style="border-bottom:3px solid brown">
+      <div class="reviewdiv">
+          <img src="heart.png" alt ="like us" class="imgreview" >
+          <h2 style="text-align: center; color: brown;font-style: italic"> Customer Love Us</h2>
+          <p style="text-align: center ; font-size: 15px">
+              We love to see our customers leave with their taste buds delighted and they say
+              amazing things.
+            </p>
+        </div>
+  </section >
+  
+  <!----next Section  ---->
+  
+  
+  <section class="aboutsec">
+  <h1 style="text-align: center ; margin-top: 10px;color: brown">About Us</h1>
+  <p class="aboutpara"> THIS WEBSITE HAS BEEN SHAPED SO THAT WE PEOPLE CAN ORDER CAKES FOR THEIR LOVED ONES.
+     YOU CAN SHARE YOUR INCREDIBLY VALUABLE VIEWS ON OUR BAKERY, ANY SUGGESTIONS ARE WELCOME.
+     We love to see our customers leave with their taste buds delighted and they say
+     amazing things.THIS WEBSITE HAS BEEN SHAPED SO THAT WE PEOPLE CAN ORDER CAKES FOR THEIR LOVED ONES.
+     YOU CAN SHARE YOUR INCREDIBLY VALUABLE VIEWS ON OUR BAKERY, ANY SUGGESTIONS ARE WELCOME.
+     We love to see our customers leave with their taste buds delighted and they say
+     amazing things.</p>
+     <img src="images.jpg" alt="logo" class="abtlogo">
+     <p style="text-align: center">We aim to add flavour to your occassions by baking a beautiful and 
+       attractive cake that's fresh and delicious to taste!</p>
+     <section class="abtsec">
+       <img src="call.png" alt="call" class="abticon" data-toggle="tooltip" title="Call us at -8978867856">
+       <a href="https://www.facebook.com/"><img src="facebook.png" alt="facebook" class="abticon" data-toggle="tooltip" title="Like our Facebook Page"></a>
+       <a href="https://www.instagram.com/"><img src="instagram.png" alt="instagram" class="abticon" data-toggle="tooltip" title="Follow us on Instagram"></a>
+       <img src="gmail.png" alt="gmail" class="abticon" data-toggle="tooltip" title="Mail Us">
+     </section>
+  <p style="text-align: center">© 2019 Baking Girl. All Rights Reserved.</p>
+  
+  </section>
+  
+  
+  
+  
+  
+  <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+      });
+      $(".chb").change(function() {
+      $(".chb").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      $(".chb1").change(function() {
+      $(".chb1").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      $(".chb2").change(function() {
+      $(".chb2").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      </script>  
+         </body>
+  </html>

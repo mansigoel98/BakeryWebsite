@@ -310,7 +310,7 @@ input[type=text]:focus, input[type=password]:focus {
                header('Location:myAccount.php');
               }
           mysqli_select_db($con,'bakery');
-                  $q = "select * from defadd where username = $username";
+                  $q = "select * from defadd where username = '$username'";
                   $result = mysqli_query($con,$q);
                   $num=mysqli_num_rows($result);
               if($num==1){

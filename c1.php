@@ -374,6 +374,7 @@ session_start();
     $_SESSION['cakeName']="Strawberry Chochlate Cake";
     $_SESSION['price']="945.00";
     $_SESSION['imgcake']="scake1.jpg";
+    $_SESSION['type']="cake";
 
     ?>
     <p style="margin-left: 35px ; margin-bottom: 4px; color:grey">Message on cake</p>
@@ -402,7 +403,7 @@ session_start();
 
   </div>
   <div>
-    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-size: 20px; font-style: italic"><strong>Cke Type</strong></p>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-size: 20px; font-style: italic"><strong>Cake Type</strong></p>
     <label><input type="checkbox" name="ct1" class="chb2" id="ct" checked />Eggless</label>
     <label><input type="checkbox" name="ct2" class="chb2" id="ct" style="margin-left: 220px"/>With Egg</label><br>
 

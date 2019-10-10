@@ -35,7 +35,7 @@ session_start();
 .flip-box {
     
     width: 260px;
-    height: 350px;
+    height: 380px;
     margin-left: 15px;
     margin-right: 15px;
    
@@ -56,7 +56,7 @@ session_start();
 .flip-box-inner {
     position: relative;
     width: 260px;
-    height: 300px;
+    height: 330px;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
@@ -237,11 +237,13 @@ session_start();
           <div class="flip-box-inner">
              <div class="flip-box-front">
                  <a href="cook1.php"><img src="cook1.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00/Kg"></a>
-                 <a href="cook1.php" style="color: black"><p  data-toggle="tooltip" title="Rs 945.00/Kg"> Strawberry Chochlate</p></a>
+                 <a href="cook1.php" style="color: black"><p  data-toggle="tooltip" title="Rs 945.00/Kg"> Silky Kisses</p></a>
+                 <p>The pleasure lies not in the cookies, but in the pattern the crumbs make when the cookies crumble.</p>
              </div>
              <div class="flip-box-back">
                  <a href="cook1.php"><img src="cook1.jpg" alt="cake" class="scake " href="#" data-toggle="tooltip" title="Rs 945.00/Kg"></a>
-                <a href="cook1.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00/Kg">  Strawberry Chochlate</p></a>
+                <a href="cook1.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00/Kg">  Silky Kisses</p></a>
+                <p style="color:black">The pleasure lies not in the cookies, but in the pattern the crumbs make when the cookies crumble.</p>
              </div>   
           </div>
      </div>
@@ -250,11 +252,13 @@ session_start();
         <div class="flip-box-inner">
            <div class="flip-box-front">
                <a href="cook2.php"><img src="cook2.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-               <a href="cook2.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">  Dark Chochlate</p></a>
+               <a href="cook2.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">  Choco Chip Cookies</p></a>
+               <p style="color:black">Fortune cookies are a good idea. If the message is positive, it can make your day a little better.</p>
            </div>
            <div class="flip-box-back">
                <a href="cook2.php"><img src="cook2.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-               <a href="cook2.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Dark Chochlate</p></a>
+               <a href="cook2.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Choco Chip Cookies</p></a>
+               <p style="color:black">Fortune cookies are a good idea. If the message is positive, it can make your day a little better.</p>
            </div>   
         </div>
    </div>
@@ -262,11 +266,13 @@ session_start();
       <div class="flip-box-inner">
          <div class="flip-box-front">
              <a href="cook3.php"><img src="cook3.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 575.00"></a>
-             <a href="cook3.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 575.00">  Vanilla Chochlate</p></a>
+             <a href="cook3.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 575.00">  Vanilla Cookies</p></a>
+             <p style="color:black">For someone who never fails to chip in when asked.</p>
          </div>
          <div class="flip-box-back">
              <a href="cook3.php"><img src="cook3.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 575.00"></a>
-             <a href="cook3.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 575.00">  Vanilla Chochlate</p></a>
+             <a href="cook3.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 575.00">  Vanilla Cookies</p></a>
+             <p style="color:black">For someone who never fails to chip in when asked.</p>
          </div>   
       </div>
   </div>
@@ -279,11 +285,13 @@ session_start();
           <div class="flip-box-inner">
              <div class="flip-box-front">
                  <a href="cook4.php"><img src="cook4.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-                 <a href="cook4.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00"> Strawberry Cake</p></a>
+                 <a href="cook4.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">Choclate Chip Cookies</p></a>
+                 <p style="color:black">Fortune cookies are a good idea. If the message is positive, it can make your day a little better.</p>
              </div>
              <div class="flip-box-back">
                  <a href="cook4.php"><img src="cook4.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-                 <a href="cook4.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Strawberry Cake</p></a>
+                 <a href="cook4.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00"> Choclate Chip Cookies</p></a>
+                 <p style="color:black">Fortune cookies are a good idea. If the message is positive, it can make your day a little better.</p>
              </div>   
           </div>
      </div>
@@ -292,11 +300,13 @@ session_start();
         <div class="flip-box-inner">
            <div class="flip-box-front">
                <a href="cook5.php"><img src="cook5.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 875.00"></a>
-               <a href="cook5.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">  Flower Cake</p></a>
+               <a href="cook5.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">  Penguin Cookies</p></a>
+               <p style="color:black">The pleasure lies not in the cookies, but in the pattern the crumbs make when the cookies crumble.</p>
            </div>
            <div class="flip-box-back">
                <a href="cook5.php"><img src="cook5.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 875.00"></a>
-               <a href="cook5.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Flower Cake</p></a>
+               <a href="cook5.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00"> Penguin Cookies</p></a>
+               <p style="color:black">The pleasure lies not in the cookies, but in the pattern the crumbs make when the cookies crumble.</p>
            </div>   
 
 
@@ -306,11 +316,13 @@ session_start();
       <div class="flip-box-inner">
          <div class="flip-box-front">
              <a href="cook6.php"><img src="cook6.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 545.00"></a>
-             <a href="cook6.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 545.00">  Rose Cake</p></a>
+             <a href="cook6.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 545.00">  Gems Cookies</p></a>
+             <p style="color:black">These cookies are a little nutty… just like me!</p>
          </div>
          <div class="flip-box-back">
               <a href="cook6.php"><img src="cook6.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 545.00"></a>
-             <a href="cook6.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 545.00">  Rose Cake</p></a>
+             <a href="cook6.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 545.00">  Gems Cookies</p></a>
+             <p style="color:black">These cookies are a little nutty… just like me!</p>
          </div>   
       </div>
   </div>
@@ -325,11 +337,13 @@ session_start();
              <div class="flip-box-front">
                  <a href="cook7.php"><img src="cook7.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 1075.00"></a>
                  <a href="cook7.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 1075.00">  Dark Chochlate Cake</p></a>
-             </div>
+                 <p style="color:black">For someone who never fails to chip in when asked.</p>
+                </div>
              <div class="flip-box-back">
                  <a href="cook7.php"><img src="cook7.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 1075.00"></a>
                  <a href="cook7.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 1075.00">  Dark Chochlate Cake</p></a>
-             </div>   
+                 <p style="color:black">For someone who never fails to chip in when asked.</p>
+                </div>   
           </div>
      </div>
   
@@ -337,11 +351,13 @@ session_start();
         <div class="flip-box-inner">
            <div class="flip-box-front">
                <a href="cook8.php"><img src="cook8.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 745.00"></a>
-               <a href="cook8.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 7455.00">  Dark Magic Cake</p></a>
+               <a href="cook8.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 745.00">  Heart Shape Cookies</p></a>
+               <p style="color:black">The pleasure lies not in the cookies, but in the pattern the crumbs make when the cookies crumble.</p>
            </div>
            <div class="flip-box-back">
                <a href="cook8.php"><img src="cook8.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 745.00"></a>
-               <a href="cook8.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 745.00">  Dark Magic Cake</p></a>
+               <a href="cook8.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 745.00"> Heart Shape Cookies</p></a>
+               <p style="color:black">The pleasure lies not in the cookies, but in the pattern the crumbs make when the cookies crumble.</p>
            </div>   
         </div>
    </div>
@@ -349,11 +365,13 @@ session_start();
       <div class="flip-box-inner">
          <div class="flip-box-front">
              <a href="cook9.php"><img src="cook9.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00"></a>
-             <a href="cook9.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 945.00">  Strawberry Chochlate Cake</p></a>
+             <a href="cook9.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 945.00">  Red Valvet Cookies</p></a>
+             <p style="color:black">These cookies are a little nutty… just like me!</p>
          </div>
          <div class="flip-box-back">
              <a href="cook9.php"><img src="cook9.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00"></a>
-             <a href="cook9.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00">  Strawberry Chochlate Cake</p></a>
+             <a href="cook9.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00">  Red Valvet Cookies</p></a>
+             <p style="color:black">These cookies are a little nutty… just like me!</p>
          </div>   
       </div>
   </div>

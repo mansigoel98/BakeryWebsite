@@ -198,7 +198,7 @@ margin-right: 48%;
       border: 1px solid brown;
       border-radius: 20%;
   }
-  a.hv:active{
+  a.hv.active{
       background-color: burlywood;
       border: 1px solid brown;
       border-radius: 20%;

@@ -183,22 +183,9 @@ if(!isset($_SESSION['username'])){
              <img src="images.jpg" alt="Bakery Logo" width="80px" height="80px" style="margin-left: 100px " >
              <a href="viewCart"><img src="Cart.png" alt="cart" width=30px height="30px" style=" margin-left:900px" data-toggle="tooltip" title="View Cert"></a>
              <?php
-             if(isset($_SESSION['username'])){
-             $username=$_SESSION['username'];
-             $con =mysqli_connect('localhost','mansi','mansi');
-            if($con)
-                {
-                   mysqli_select_db($con,'bakery');
-                   $q = "select * from cart where username='$username'";
-                   $result = mysqli_query($con,$q);
-                   $num=mysqli_num_rows($result);
-                   echo "You have $num item in your cart";
-                   mysqli_close($con);
-                }
-              }
-              else{
+            
                 echo "You have 0 item in your cart";
-             }
+             
 
              ?>
              <?php 
@@ -258,163 +245,49 @@ if(!isset($_SESSION['username'])){
 <!----------------------------------------------next section------------------------------------------------------->
 
 
-<div class="cartdiv"> 
-        <?php
-        $username=$_SESSION['username'];
-        $total=0;
-        $con =mysqli_connect('localhost','mansi','mansi');
-       if($con)
-           {
-              mysqli_select_db($con,'bakery');
-              $q = "select * from cart where username='$username'";
-              $result = mysqli_query($con,$q);
-              $num=mysqli_num_rows($result);
-              if($num==0){
-                echo "<h1 class='annh'>Your Cart is empty</h1>";
-                echo "<hr class='hor'>";
-              }
-              else{
-                
-                $num=mysqli_num_rows($result);
-               for($i=1 ;$i<=$num;$i++) {
-               $row=mysqli_fetch_array($result);
-               $username=$row['username'];
-               $cakeName=$row['cakeName'];
-               $cakeid=$row['cakeid'];
-               $price=$row['price'];
-                $imgcake=$row['imgcake'];
-                $msg=$row['msg'];
-                $weight=$row['weight'];
-                $flavour=$row['flavour'];
-                $caketype=$row['caketype'];
-                ?>
-                <div style="border-bottom : 2px solid grey">
-                <?php
-                echo "<h1 class='annh'>$cakeName</h1>";
-                echo "<img src='$imgcake' alt='cake' class='cartimg'>";
-                echo "<h5 class='cartdetails'>Price : $price </h5>";
-                echo "<h5 class='cartdetails'>Message On Cake : $msg</h5>";
-                echo "<h5 class='cartdetails'>Weight of Cake : $weight</h5>";
-                echo "<h5 class='cartdetails'>Flavour of Cake : $flavour</h5>";
-                echo "<h5 class='cartdetails'>Cake Type : $caketype</h5>";
-                ?>
-                </div>
-               
-                <?php
-                $total =$total +$price;
-              }
-              echo "<br><br>";
-              echo "<h4>Total value of cart : $total</h4>";
-               ?>
 
 
-               <hr class="hor">
+<?php
+           $username=$_SESSION['username'];
+            $con =mysqli_connect('localhost','mansi','mansi');
+           if($con)
+               {
+                  mysqli_select_db($con,'bakery');
+                  $q = "delete from cart where username = '$username'";
+                 mysqli_query($con,$q);
 
 
-               <?php
+
+                 $q = "select * from defadd where username = '$username'";
+                 $result = mysqli_query($con,$q);
+                 $num=mysqli_num_rows($result);
+                  if($num==1){
+                  for($i=1 ;$i<=$num;$i++) {
+                  $row=mysqli_fetch_array($result);
+                  $addid=$row['addid'];
+                  $username=$row['username'];
+                  $name=$row['name'];
+                  $mobile=$row['mobile'];
+                  $street=$row['street'];
+                  $city=$row['city'];
+                  $state=$row['state'];
+                  $country=$row['country'];
+                  $pin=$row['pin'];
+             }
+             $q= "delete from secadd where username = '$username'";
+             mysqli_query($con,$q);
+
+             $q = "insert into secadd (addid,username,name,mobile,street,city,state,country,pin) values ($addid,'$username','$name','$mobile','$street','$city','$state','$country','$pin')";
+             mysqli_query($con,$q);
            }
 
-           $q = "select * from secadd where username='$username'";
-           $result = mysqli_query($con,$q);
-           $num2=mysqli_num_rows($result);
-           if($num2==0){
-             echo "<h1 class='annh'>No address is selected</h1>";
-           }
-           else{
-            echo "<h1 class='annh'>Delivery Address</h1>";
-            for($i=1 ;$i<=$num2;$i++) {
-              $row=mysqli_fetch_array($result);
-              $addid=$row['addid'];
-              $username=$row['username'];
-              $name=$row['name'];
-              $mobile=$row['mobile'];
-              $street=$row['street'];
-               $city=$row['city'];
-               $state=$row['state'];
-               $country=$row['country'];
-               $pin=$row['pin'];
-               echo "<h5 class='cartdetails'>$name</h5>";
-               echo "<h5 class='cartdetails'>Phone number: $mobile</h5>";
-               echo "<h5 class='cartdetails'>$street</h5>";
-               echo "<h5 class='cartdetails'>City : $city</h5>";
-               echo "<h5 class='cartdetails'>State : $state</h5>";
-               echo "<h5 class='cartdetails'>Country : $country</h5>";
-               echo "<h5 class='cartdetails'>Pincode : $pin</h5>";
-            }
-           }
-        } 
-
-        mysqli_close($con);
+            mysqli_close($con);
+         }
            ?>
-<a href="myaddress.php"><button type="button" class="btdes">Select Another Address</button></a>
-<hr class="hor">
-                     <h1 class='annh'>Select  Payment Method</h1>
-                     <button type="button" class="pay" id="foo" onclick="payment()">Net Banking</button>
-                     <br>
-                     <button type="button" class="pay" id="foo1" onclick="payment1()"> Paytm</button>
-                     <br>
-                     <button type="button" class="pay" id="foo2" onclick="payment2()">Debit Card</button>
-                     <br>
-                     <button type="button" class="pay" id="foo3" onclick="payment3()">Cash</button>
-                     <br>
-
-<hr class="hor">
-<button type="button" class="btdes" onclick ="confirm()">Confirm Order</button>
-      </div>
-
-
-      <script>
-        var pay=0;
-function payment() {
-    document.getElementById('foo').style.backgroundColor = "rgb(64, 116, 64)";
-    document.getElementById('foo1').style.backgroundColor = "green";
-    document.getElementById('foo2').style.backgroundColor = "green";
-    document.getElementById('foo3').style.backgroundColor = "green";
-     pay=1;
-}
-function payment1() {
-    document.getElementById('foo1').style.backgroundColor = "rgb(64, 116, 64)";
-    document.getElementById('foo').style.backgroundColor = "green";
-    document.getElementById('foo2').style.backgroundColor = "green";
-    document.getElementById('foo3').style.backgroundColor = "green";
-     pay=1;
-}
-function payment2() {
-    document.getElementById('foo2').style.backgroundColor = "rgb(64, 116, 64)";
-    document.getElementById('foo1').style.backgroundColor = "green";
-    document.getElementById('foo').style.backgroundColor = "green";
-    document.getElementById('foo3').style.backgroundColor = "green";
-    pay=1;
-}
-function payment3() {
-    document.getElementById('foo3').style.backgroundColor = "rgb(64, 116, 64)";
-    document.getElementById('foo1').style.backgroundColor = "green";
-    document.getElementById('foo2').style.backgroundColor = "green";
-    document.getElementById('foo').style.backgroundColor = "green";
-    pay=1;
-}
-
-function confirm(){
-  if(pay==0){
-    alert("No payment method selected");
-  }
-  else if(<?php echo "$num2"?> ==0){
-    alert("No address selected");
-
-  }
-  else if(<?php echo "$num"?> ==0){
-    alert("Your cart is empty");
-
-  }
-  else{
-    window.open("http://localhost/BakingGirl/confirm.php","_self");
-  }
-}
-     </script>
 
 
 
-
+<h1 class="annh" >Confirmed order Successfully</h1>
 
 
 

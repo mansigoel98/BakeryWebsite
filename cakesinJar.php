@@ -35,7 +35,7 @@ session_start();
 .flip-box {
     
     width: 260px;
-    height: 350px;
+    height: 300px;
     margin-left: 15px;
     margin-right: 15px;
    
@@ -235,12 +235,12 @@ session_start();
       <div class="flip-box scake-align">
           <div class="flip-box-inner">
              <div class="flip-box-front">
-                 <a href="c1.html"><img src="cj1.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00/Kg"></a>
-                 <a href="c1.html" style="color: black"><p  data-toggle="tooltip" title="Rs 945.00/Kg"> Strawberry Chochlate</p></a>
+                 <a href="cj1.php"><img src="cj1.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00/Kg"></a>
+                 <a href="cj1.php" style="color: black"><p  data-toggle="tooltip" title="Rs 945.00/Kg"> Red Velvet Jar</p></a>
              </div>
              <div class="flip-box-back">
-                 <a href="c1.html"><img src="cj1.jpg" alt="cake" class="scake " href="#" data-toggle="tooltip" title="Rs 945.00/Kg"></a>
-                <a href="c1.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00/Kg">  Strawberry Chochlate</p></a>
+                 <a href="cj1.php"><img src="cj1.jpg" alt="cake" class="scake " href="#" data-toggle="tooltip" title="Rs 945.00/Kg"></a>
+                <a href="cj1.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00/Kg">  Red Velvet Jar</p></a>
              </div>   
           </div>
      </div>
@@ -248,24 +248,24 @@ session_start();
      <div class="flip-box scake-align">
         <div class="flip-box-inner">
            <div class="flip-box-front">
-               <a href="c2.html"><img src="cj2.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-               <a href="c2.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">  Dark Chochlate</p></a>
+               <a href="cj2.php"><img src="cj2.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
+               <a href="cj2.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00"> Fruit Jar</p></a>
            </div>
            <div class="flip-box-back">
-               <a href="c2.html"><img src="cj2.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-               <a href="c2.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Dark Chochlate</p></a>
+               <a href="cj2.php"><img src="cj2.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
+               <a href="cj2.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Fruit Jar</p></a>
            </div>   
         </div>
    </div>
    <div class="flip-box scake-align">
       <div class="flip-box-inner">
          <div class="flip-box-front">
-             <a href="c4.html"><img src="cj3.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 575.00"></a>
-             <a href="c4.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 575.00">  Vanilla Chochlate</p></a>
+             <a href="cj3.php"><img src="cj3.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 575.00"></a>
+             <a href="cj3.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 575.00"> Chochlate Jar</p></a>
          </div>
          <div class="flip-box-back">
-             <a href="c4.html"><img src="cj3.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 575.00"></a>
-             <a href="c4.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 575.00">  Vanilla Chochlate</p></a>
+             <a href="cj3.php"><img src="cj3.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 575.00"></a>
+             <a href="cj3.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 575.00">  Chochlate Jar</p></a>
          </div>   
       </div>
   </div>
@@ -277,12 +277,12 @@ session_start();
       <div class="flip-box scake-align">
           <div class="flip-box-inner">
              <div class="flip-box-front">
-                 <a href="c3.html"><img src="cj4.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-                 <a href="c3.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00"> Strawberry Cake</p></a>
+                 <a href="cj4.php"><img src="cj4.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
+                 <a href="cj4.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00"> Brownie Cake</p></a>
              </div>
              <div class="flip-box-back">
-                 <a href="c3.html"><img src="cj4.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-                 <a href="c3.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Strawberry Cake</p></a>
+                 <a href="cj4.php"><img src="cj4.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
+                 <a href="cj4.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Brownie Cake</p></a>
              </div>   
           </div>
      </div>
@@ -290,12 +290,12 @@ session_start();
      <div class="flip-box scake-align">
         <div class="flip-box-inner">
            <div class="flip-box-front">
-               <a href="c5.html"><img src="cj5.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 875.00"></a>
-               <a href="c5.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">  Flower Cake</p></a>
+               <a href="cj5.php"><img src="cj5.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 875.00"></a>
+               <a href="cj5.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">  Flower Cake</p></a>
            </div>
            <div class="flip-box-back">
-               <a href="c5.html"><img src="cj5.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 875.00"></a>
-               <a href="c5.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Flower Cake</p></a>
+               <a href="cj5.php"><img src="cj5.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 875.00"></a>
+               <a href="cj5.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Flower Cake</p></a>
            </div>   
 
 
@@ -304,12 +304,12 @@ session_start();
    <div class="flip-box scake-align">
       <div class="flip-box-inner">
          <div class="flip-box-front">
-             <a href="c6.html"><img src="cj6.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 545.00"></a>
-             <a href="c6.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 545.00">  Rose Cake</p></a>
+             <a href="cj6.php"><img src="cj6.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 545.00"></a>
+             <a href="cj6.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 545.00">  Vanilla Cake Jar</p></a>
          </div>
          <div class="flip-box-back">
-              <a href="c6.html"><img src="cj6.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 545.00"></a>
-             <a href="c6.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 545.00">  Rose Cake</p></a>
+              <a href="cj6.php"><img src="cj6.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 545.00"></a>
+             <a href="cj6.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 545.00">  Vanilla Cake Jar</p></a>
          </div>   
       </div>
   </div>
@@ -322,12 +322,12 @@ session_start();
       <div class="flip-box scake-align">
           <div class="flip-box-inner">
              <div class="flip-box-front">
-                 <a href="c7.html"><img src="cj7.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 1075.00"></a>
-                 <a href="c7.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 1075.00">  Dark Chochlate Cake</p></a>
+                 <a href="cj7.php"><img src="cj7.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 1075.00"></a>
+                 <a href="cj7.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 1075.00">  Dark Chochlate Cake Jar</p></a>
              </div>
              <div class="flip-box-back">
-                 <a href="c7.html"><img src="cj7.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 1075.00"></a>
-                 <a href="c7.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 1075.00">  Dark Chochlate Cake</p></a>
+                 <a href="cj7.php"><img src="cj7.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 1075.00"></a>
+                 <a href="cj7.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 1075.00">  Dark Chochlate Cake Jar</p></a>
              </div>   
           </div>
      </div>
@@ -335,24 +335,24 @@ session_start();
      <div class="flip-box scake-align">
         <div class="flip-box-inner">
            <div class="flip-box-front">
-               <a href="c8.html"><img src="cj8.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 745.00"></a>
-               <a href="c8.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 7455.00">  Dark Magic Cake</p></a>
+               <a href="cj8.php"><img src="cj8.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 745.00"></a>
+               <a href="cj8.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 7455.00">  Dark Magic Cake Jar</p></a>
            </div>
            <div class="flip-box-back">
-               <a href="c8.html"><img src="cj8.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 745.00"></a>
-               <a href="c8.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 745.00">  Dark Magic Cake</p></a>
+               <a href="cj8.php"><img src="cj8.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 745.00"></a>
+               <a href="cj8.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 745.00">  Dark Magic Cake Jar</p></a>
            </div>   
         </div>
    </div>
    <div class="flip-box scake-align">
       <div class="flip-box-inner">
          <div class="flip-box-front">
-             <a href="c9.html"><img src="cj9.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00"></a>
-             <a href="c9.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 945.00">  Strawberry Chochlate Cake</p></a>
+             <a href="cj9.php"><img src="cj9.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00"></a>
+             <a href="cj9.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 945.00"> Chochlate Cake</p></a>
          </div>
          <div class="flip-box-back">
-             <a href="c9.html"><img src="cj9.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00"></a>
-             <a href="c9.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00">  Strawberry Chochlate Cake</p></a>
+             <a href="cj9.php"><img src="cj9.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00"></a>
+             <a href="cj9.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00">  Chochlate Cake</p></a>
          </div>   
       </div>
   </div>

@@ -317,6 +317,7 @@ session_start();
     $_SESSION['cakeName']="Dark Chochlate Cake";
     $_SESSION['price']="675.00";
     $_SESSION['imgcake']="scake2.jpg";
+    $_SESSION['type']="cake";
 
     ?>
     <p style="margin-left: 35px ; margin-bottom: 4px; color:grey">Message on cake</p>
@@ -345,7 +346,7 @@ session_start();
 
   </div>
   <div>
-    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-size: 20px; font-style: italic"><strong>Cke Type</strong></p>
+    <p style="margin-left: 35px ; margin-bottom: 4px; color:brown; font-size: 20px; font-style: italic"><strong>Cake Type</strong></p>
     <label><input type="checkbox" name="ct1" class="chb2" id="ct" checked />Eggless</label>
     <label><input type="checkbox" name="ct2" class="chb2" id="ct" style="margin-left: 220px"/>With Egg</label><br>
 
@@ -437,6 +438,19 @@ session_start();
   <script>
       $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();   
+      });
+
+      $(".chb").change(function() {
+      $(".chb").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      $(".chb1").change(function() {
+      $(".chb1").prop('checked', false);
+      $(this).prop('checked', true);
+      });
+      $(".chb2").change(function() {
+      $(".chb2").prop('checked', false);
+      $(this).prop('checked', true);
       });
       </script>  
          </body>

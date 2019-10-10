@@ -35,10 +35,9 @@ session_start();
 .flip-box {
     
     width: 260px;
-    height: 350px;
+    height: 380px;
     margin-left: 15px;
     margin-right: 15px;
-   
     margin-bottom: 50px;
     background-color: white;
     margin-top:30px;
@@ -57,6 +56,7 @@ session_start();
     position: relative;
     width: 260px;
     height: 300px;
+    
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
@@ -233,38 +233,41 @@ session_start();
       <div class="flip-box scake-align">
           <div class="flip-box-inner">
              <div class="flip-box-front">
-                 <a href="c1.html"><img src="lc1.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00/Kg"></a>
-                 <a href="c1.html" style="color: black"><p  data-toggle="tooltip" title="Rs 945.00/Kg"> Strawberry Chochlate</p></a>
+                 <a href="lux1.php"><img src="lc1.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00/Kg"></a>
+                 <a href="lux1.php" style="color: black"><p  data-toggle="tooltip" title="Rs 945.00/Kg"> Handmade Chochlate</p></a>
+                 Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.
              </div>
              <div class="flip-box-back">
-                 <a href="c1.html"><img src="lc1.jpg" alt="cake" class="scake " href="#" data-toggle="tooltip" title="Rs 945.00/Kg"></a>
-                <a href="c1.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00/Kg">  Strawberry Chochlate</p></a>
-             </div>   
+                 <a href="lux1.php"><img src="lc1.jpg" alt="cake" class="scake " href="#" data-toggle="tooltip" title="Rs 945.00/Kg"></a>
+                <a href="lux1.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00/Kg">  Handmade Chochlate</p></a>
+                <p style="color:black">Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.</p></div>   
           </div>
      </div>
   
      <div class="flip-box scake-align">
         <div class="flip-box-inner">
            <div class="flip-box-front">
-               <a href="c2.html"><img src="lc2.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-               <a href="c2.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">  Dark Chochlate</p></a>
+               <a href="lux2.php"><img src="lc2.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
+               <a href="lux2.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">Chocho Chip chochlate</p></a>
+               Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.
            </div>
            <div class="flip-box-back">
-               <a href="c2.html"><img src="lc2.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-               <a href="c2.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Dark Chochlate</p></a>
-           </div>   
+               <a href="lux2.php"><img src="lc2.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
+               <a href="lux2.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00"> Chocho Chip chochlate</p></a>
+               <p style="color:black">Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.</p>  </div>   
         </div>
    </div>
    <div class="flip-box scake-align">
       <div class="flip-box-inner">
          <div class="flip-box-front">
-             <a href="c4.html"><img src="lc3.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 575.00"></a>
-             <a href="c4.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 575.00">  Vanilla Chochlate</p></a>
+             <a href="lux3.php"><img src="lc3.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 575.00"></a>
+             <a href="lux3.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 575.00">  Vanilla Chochlate</p></a>
+             Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.
          </div>
          <div class="flip-box-back">
-             <a href="c4.html"><img src="lc3.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 575.00"></a>
-             <a href="c4.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 575.00">  Vanilla Chochlate</p></a>
-         </div>   
+             <a href="lux3.php"><img src="lc3.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 575.00"></a>
+             <a href="lux3.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 575.00">  Vanilla Chochlate</p></a>
+             <p style="color:black">Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.</p>  </div>   
       </div>
   </div>
   </div>
@@ -275,25 +278,28 @@ session_start();
       <div class="flip-box scake-align">
           <div class="flip-box-inner">
              <div class="flip-box-front">
-                 <a href="c3.html"><img src="lc4.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-                 <a href="c3.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00"> Strawberry Cake</p></a>
+                 <a href="lux4.php"><img src="lc4.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
+                 <a href="lux4.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">Chochlate Chip Chochlate</p></a>
+                 Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.
              </div>
              <div class="flip-box-back">
-                 <a href="c3.html"><img src="lc4.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
-                 <a href="c3.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Strawberry Cake</p></a>
-             </div>   
+                 <a href="lux4.php"><img src="lc4.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 675.00"></a>
+                 <a href="lux4.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00"> Chochlate Chip Chochlate</p></a>
+                 <p style="color:black">Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.</p> </div>   
           </div>
      </div>
   
      <div class="flip-box scake-align">
         <div class="flip-box-inner">
            <div class="flip-box-front">
-               <a href="c5.html"><img src="lc5.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 875.00"></a>
-               <a href="c5.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00">  Flower Cake</p></a>
+               <a href="lux5.php"><img src="lc5.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 875.00"></a>
+               <a href="lux5.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 675.00"> Large pack Chochlate</p></a>
+               Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.
            </div>
            <div class="flip-box-back">
-               <a href="c5.html"><img src="lc5.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 875.00"></a>
-               <a href="c5.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00">  Flower Cake</p></a>
+               <a href="lux5.php"><img src="lc5.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 875.00"></a>
+               <a href="lux5.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 675.00"> Large pack Chochlate</p></a>
+               <p style="color:black">Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.</p>
            </div>   
 
 
@@ -302,12 +308,14 @@ session_start();
    <div class="flip-box scake-align">
       <div class="flip-box-inner">
          <div class="flip-box-front">
-             <a href="c6.html"><img src="lc6.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 545.00"></a>
-             <a href="c6.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 545.00">  Rose Cake</p></a>
+             <a href="lux6.php"><img src="lc6.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 545.00"></a>
+             <a href="lux6.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 545.00"> Gems Chochlate</p></a>
+             Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.
          </div>
          <div class="flip-box-back">
-              <a href="c6.html"><img src="lc6.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 545.00"></a>
-             <a href="c6.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 545.00">  Rose Cake</p></a>
+              <a href="lux6.php"><img src="lc6.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 545.00"></a>
+             <a href="lux6.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 545.00"> Gems Chochlate</p></a>
+             <p style="color:black">Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.</p>
          </div>   
       </div>
   </div>
@@ -320,12 +328,14 @@ session_start();
       <div class="flip-box scake-align">
           <div class="flip-box-inner">
              <div class="flip-box-front">
-                 <a href="c7.html"><img src="lc7.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 1075.00"></a>
-                 <a href="c7.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 1075.00">  Dark Chochlate Cake</p></a>
+                 <a href="lux7.php"><img src="lc7.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 1075.00"></a>
+                 <a href="lux7.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 1075.00">Dark Chochlate Box</p></a>
+                 Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.
              </div>
              <div class="flip-box-back">
-                 <a href="c7.html"><img src="lc7.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 1075.00"></a>
-                 <a href="c7.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 1075.00">  Dark Chochlate Cake</p></a>
+                 <a href="lux7.php"><img src="lc7.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 1075.00"></a>
+                 <a href="lux7.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 1075.00"> Dark Chochlate Box</p></a>
+                 <p style="color:black">Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.</p>
              </div>   
           </div>
      </div>
@@ -333,24 +343,28 @@ session_start();
      <div class="flip-box scake-align">
         <div class="flip-box-inner">
            <div class="flip-box-front">
-               <a href="c8.html"><img src="lc8.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 745.00"></a>
-               <a href="c8.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 7455.00">  Dark Magic Cake</p></a>
+               <a href="lux8.php"><img src="lc8.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 745.00"></a>
+               <a href="lux8.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 7455.00">Square Shape Chochlate</p></a>
+               Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.
            </div>
            <div class="flip-box-back">
-               <a href="c8.html"><img src="lc8.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 745.00"></a>
-               <a href="c8.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 745.00">  Dark Magic Cake</p></a>
+               <a href="lux8.php"><img src="lc8.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 745.00"></a>
+               <a href="lux8.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 745.00"> Square Shape Chochlate</p></a>
+               <p style="color:black">Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.</p>
            </div>   
         </div>
    </div>
    <div class="flip-box scake-align">
       <div class="flip-box-inner">
          <div class="flip-box-front">
-             <a href="c9.html"><img src="lc9.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00"></a>
-             <a href="c9.html" style="color: black"> <p  data-toggle="tooltip" title="Rs 945.00">  Strawberry Chochlate Cake</p></a>
+             <a href="lux9.php"><img src="lc9.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00"></a>
+             <a href="lux9.php" style="color: black"> <p  data-toggle="tooltip" title="Rs 945.00"> Red Velvet Chochlate</p></a>
+             Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.
          </div>
          <div class="flip-box-back">
-             <a href="c9.html"><img src="lc9.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00"></a>
-             <a href="c9.html" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00">  Strawberry Chochlate Cake</p></a>
+             <a href="lux9.php"><img src="lc9.jpg" alt="cake" class="scake " data-toggle="tooltip" title="Rs 945.00"></a>
+             <a href="lux9.php" style="color: brown"> <p  data-toggle="tooltip" title="Rs 945.00">  Red Velvet Chochlate</p></a>
+             <p style="color:black">Fortune chochlate are a good idea. If the message is positive, it can make your day a little better.</p>
          </div>   
       </div>
   </div>

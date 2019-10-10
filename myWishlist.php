@@ -296,16 +296,33 @@ if(!isset($_SESSION['username'])){
                 $weight=$row['weight'];
                 $flavour=$row['flavour'];
                 $caketype=$row['caketype'];
+                $type=$row['type'];
                 ?>
                 <div style="border-bottom : 2px solid grey">
                 <?php
-                echo "<h1 class='annh'>$cakeName</h1>";
-                echo "<img src='$imgcake' alt='cake' class='cartimg'>";
-                echo "<h5 class='cartdetails'>Price : $price </h5>";
-                echo "<h5 class='cartdetails'>Message On Cake : $msg</h5>";
-                echo "<h5 class='cartdetails'>Weight of Cake : $weight</h5>";
-                echo "<h5 class='cartdetails'>Flavour of Cake : $flavour</h5>";
-                echo "<h5 class='cartdetails'>Cake Type : $caketype</h5>";
+                if($type=="cake"){
+                  echo "<h1 class='annh'>$cakeName</h1>";
+                  echo "<img src='$imgcake' alt='cake' class='cartimg'>";
+                  echo "<h5 class='cartdetails'>Price : $price </h5>";
+                  echo "<h5 class='cartdetails'>Message On Cake : $msg</h5>";
+                  echo "<h5 class='cartdetails'>Weight of Cake : $weight</h5>";
+                  echo "<h5 class='cartdetails'>Flavour of Cake : $flavour</h5>";
+                  echo "<h5 class='cartdetails'>Cake Type : $caketype</h5>";
+                  }
+                  else if($type=="cookies"){
+                    echo "<h1 class='annh'>$cakeName</h1>";
+                  echo "<img src='$imgcake' alt='cake' class='cartimg'>";
+                  echo "<h5 class='cartdetails'>Price : $price </h5>";
+                  echo "<h5 class='cartdetails'>Weight of Cookies : $weight</h5>";
+                  echo "<h5 class='cartdetails'>Cookie Type : $caketype</h5>";
+                  }
+                  else if($type=="chochlate"){
+                    echo "<h1 class='annh'>$cakeName</h1>";
+                  echo "<img src='$imgcake' alt='cake' class='cartimg'>";
+                  echo "<h5 class='cartdetails'>Price : $price </h5>";
+                  echo "<h5 class='cartdetails'>Weight of Chochlate : $weight</h5>";
+                  
+                  }
                 ?>
                 <form method="POST">
                 <button type="submit" name="addtocart" class="btdes" value ="<?php echo "$cakeid"  ?>"  formaction="wishToCart.php"><i class="fa fa-shopping-cart">&nbsp;&nbsp;Add to Cart</i></button>
@@ -318,8 +335,8 @@ if(!isset($_SESSION['username'])){
               }
               echo "<br><br>";
               ?>
-              <a href="homepage.php"><button type="button" class="btcart">Continue Shopping</button></a>
               <form action="clearWish.php" method="POST">
+              <a href="homepage.php"><button type="button" class="btcart">Continue Shopping</button></a>
               <button type="submit" class="btcart">Clear Wishlist</button>
               </form>
 
