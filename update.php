@@ -228,7 +228,7 @@ session_start();
 
            <!---<img src="tick.png" alt="successful" style ="margin:400px; width:200px;height:200px;">--->
 
-
+           <img src="tick1.gif" alt="done" style="margin-left:40%">
            <h1 class="annh">Updated Successfully</h1>
 
 

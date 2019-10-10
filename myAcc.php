@@ -356,6 +356,7 @@ mysqli_query($con,$q);
 }
 
 mysqli_close($con);
+
 ?>
 
 <section class="div2">

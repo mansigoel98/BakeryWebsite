@@ -58,11 +58,14 @@ if(!isset($_SESSION['username'])){
     text-align: center;
     font-size: 30px;
     font-style: italic;
-    color: brown;
+    color: green;
     font-family: cursive;
     margin-top: 20px;
     margin-bottom:20px; 
     
+}
+.imgdes{
+  margin-left:40%;
 }
 .btdes{
     background-color: brown;
@@ -285,7 +288,7 @@ if(!isset($_SESSION['username'])){
          }
            ?>
 
-
+<img src="tick1.gif" alt="done" class="imgdes">
 
 <h1 class="annh" >Confirmed order Successfully</h1>
 
